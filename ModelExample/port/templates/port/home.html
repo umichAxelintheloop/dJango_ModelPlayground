@@ -1,0 +1,14 @@
+<h1>Axel's Portafolio</h1>
+
+{% for p in projects %}
+
+<h2>{{ p.title }}</h2>
+<p>{{ p.description }}</p>
+<img src="{{ p.image.url }}" width="750" height="1000" >
+{% if p.url %}
+<br>
+<a href="{{ p.url }}">Link</a>
+{% endif %}
+
+{% endfor %}
+
